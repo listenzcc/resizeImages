@@ -22,7 +22,7 @@ methods = dict(linear=cv2.INTER_LINEAR,
                lanc=cv2.INTER_LANCZOS4)
 
 extents = ['png', 'jpg', 'jpeg', 'tif', 'tiff']
-folder = Path(os.environ['HOMEPATH'], 'Pictures', 'snipaste')
+folder = Path(os.environ.get('HOMEPATH', '.'), 'Pictures', 'snipaste')
 
 # %%
 
@@ -178,7 +178,7 @@ if __name__ == '__main__':
         for id in data.df.index:
             print(id, data.df.loc[id, 'name'])
 
-        prompt = ' '.join(['Enter',
+        prompt = ' '.join(['Folder: {}\n'.format(data.folder),
                            '"Id" to resize the image,',
                            '"a" to resize all the images,',
                            '"c" to clear the output,',

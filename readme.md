@@ -1,5 +1,12 @@
 # Resize Image
 
+---
+- [Resize Image](#resize-image)
+  - [Install & Operation](#install--operation)
+  - [Outputs](#outputs)
+
+## Install & Operation
+
 Resize images with command-lines.
 
 ```shell
@@ -20,6 +27,12 @@ optional arguments:
                         Width of the resized image
   -v, --verbose         Verbose
 ```
+
+The terminal UI is
+
+![UI](./doc/Snipaste_2022-07-18_20-24-51.png)
+
+## Outputs
 
 It resizes the image with different interpolation methods.
 It turns out that the methods affect the quality more to the image with characters.
